@@ -1,0 +1,1 @@
+<view class="good_list"><block wx:for="{{goodsData}}" wx:for-item="item" wx:for-index="__i0__" wx:key="good_id"><view class="good_item"><image src="{{item.goods_big_logo}}"></image><view class="price"><text>{{'￥'+item.goods_price}}</text></view><view class="name">{{''+item.goods_name+''}}</view></view></block></view>

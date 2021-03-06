@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -161,42 +161,69 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+var _home = __webpack_require__(/*! ../../newwork/home.js */ 17);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var goods = function goods() {__webpack_require__.e(/*! require.ensure | components/goods */ "components/goods").then((function () {return resolve(__webpack_require__(/*! ../../components/goods.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
+{
+  data: function data() {
+    return {
+      navData: [
+      {
+        class: "iconfont icon-chaoshi",
+        text: '小小超市',
+        path: '/pages/index/goods/goods' },
+
+      {
+        class: "iconfont icon-guanyu",
+        text: '联系我们',
+        path: '/pages/index/contact/contact' },
+
+      {
+        class: "iconfont icon-tupian",
+        text: '社区图片',
+        path: '/pages/index/image/image' },
+
+      {
+        class: "iconfont icon-shipin1",
+        text: '学习视频',
+        path: '/pages/index/video/video' }],
 
 
-var _home = __webpack_require__(/*! ../../newwork/home.js */ 17); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { data: function data() {return { swiperDate: [] };}, onLoad: function onLoad() {this.getSwiperDate();}, methods: { getSwiperDate: function getSwiperDate() {var _this = this;(0, _home.swiper)().then(function (res) {_this.swiperDate = res[1].data.message;});} } };exports.default = _default;
+
+      swiperData: [],
+      goodsData: [],
+      pages: 1 };
+
+  },
+  components: {
+    goods: goods },
+
+  onLoad: function onLoad() {
+    this.getSwiperData();
+    this.getGoods();
+  },
+  onReachBottom: function onReachBottom() {
+    this.pages++;
+    this.getGoods();
+  },
+  methods: {
+    getSwiperData: function getSwiperData() {var _this = this;
+      (0, _home.swiper)().then(function (res) {
+        _this.swiperData = res[1].data.message;
+      });
+    },
+    getGoods: function getGoods() {var _this2 = this;
+      (0, _home.getGoods)(this.pages).then(function (res) {var _this2$goodsData;
+        (_this2$goodsData = _this2.goodsData).push.apply(_this2$goodsData, _toConsumableArray(res[1].data.message.goods));
+      });
+    },
+    nvaClick: function nvaClick(path) {
+      uni.navigateTo({
+        url: path });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */,

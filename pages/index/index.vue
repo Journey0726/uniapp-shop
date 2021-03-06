@@ -8,7 +8,7 @@
 		</swiper>
 		<!-- 导航区域 -->
 		<view class="nav">
-			<view class="nav_item" v-for="(item,index) in navData" :Key='index' @click="nvaClick(item.path)">
+			<view class="nav_item" v-for="item in navData" :Key='item.id' @click="nvaClick(item.path)">
 				<view :class="item.class"></view>
 				<text>{{item.text}}</text>
 			</view>
@@ -33,21 +33,25 @@
 			return {
 				navData:[
 					{
+						id:1,
 						class:"iconfont icon-chaoshi",
 						text:'小小超市',
 						path:'/pages/index/goods/goods'
 					},
 					{
+						id:2,
 						class:"iconfont icon-guanyu",
 						text:'联系我们',
 						path:'/pages/index/contact/contact'
 					},
 					{
+						id:3,
 						class:"iconfont icon-tupian",
 						text:'社区图片',
 						path:'/pages/index/image/image'
 					},
 					{
+						id:4,
 						class:"iconfont icon-shipin1",
 						text:'学习视频',
 						path:'/pages/index/video/video'
@@ -55,7 +59,8 @@
 					
 				],
 				swiperData: [],
-				goodsData:[]
+				goodsData:[],
+
 			}
 		},
 		components:{
@@ -65,6 +70,7 @@
 			this.getSwiperData()
 			this.getGoods()
 		},
+
 		methods: {
 			getSwiperData() {
 				swiper().then(res => {
@@ -72,7 +78,7 @@
 				})
 			},
 			getGoods(){
-				getGoods(3).then(res =>{
+				getGoods(1).then(res =>{
 					this.goodsData = res[1].data.message.goods
 				})
 			},

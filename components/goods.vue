@@ -32,7 +32,6 @@
 
 <style lang="scss">
 	.good_list {
-		margin-top: 30rpx;
 		background-color: #eee;
 		overflow: hidden;
 		padding: 0 15rpx;

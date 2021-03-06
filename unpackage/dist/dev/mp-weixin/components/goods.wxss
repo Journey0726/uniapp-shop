@@ -24,44 +24,46 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.home swiper {
-  width: 750rpx;
-  height: 380rpx;
-}
-.home swiper image {
-  height: 410rpx;
-  width: 100%;
-}
-.home .nav {
+.good_list {
+  background-color: #eee;
+  overflow: hidden;
+  padding: 0 15rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-around;
-          justify-content: space-around;
-  text-align: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
 }
-.home .nav .nav_item view {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 50%;
-  background-color: #b50e03;
-  margin: 10px auto;
-  line-height: 120rpx;
-  font-size: 50rpx;
-}
-.home .recommend {
-  margin-top: 30rpx;
-  background-color: #eee;
-  overflow: hidden;
-}
-.home .recommend .title {
-  color: #b50e03;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 40rpx;
+.good_list .good_item {
   background-color: #fff;
-  margin: 7rpx 0;
+  padding: 15rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  width: 355rpx;
+  margin: 10rpx 0;
+}
+.good_list .good_item image {
+  height: 150px;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+.good_list .price {
+  color: #b50e03;
+  font-size: 36rpx;
+  /* text:nth-child(2) {
+			color: #ccc;
+			font-size: 28rpx;
+			margin-left: 20rpx;
+			text-decoration: line-through;
+		} */
+}
+.good_list .name {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  padding: 15rpx 0;
 }
 
