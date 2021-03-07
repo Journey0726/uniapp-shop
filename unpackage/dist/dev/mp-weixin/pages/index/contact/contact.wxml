@@ -1,1 +1,1 @@
-<view></view>
+<view class="contact"><image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1600743078,1143915335&fm=15&gp=0.jpg"></image><view class="info"><view data-event-opts="{{[['tap',[['callPhone',['$event']]]]]}}" bindtap="__e">联系电话:xxxxxxxxx(拨打电话)</view><view>联系地址:xxxxxxxxxxx</view></view><map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}"></map></view>

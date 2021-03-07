@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "小小超市",
-  "enablePullDownRefresh": false,
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "goods": "/components/goods"
   }

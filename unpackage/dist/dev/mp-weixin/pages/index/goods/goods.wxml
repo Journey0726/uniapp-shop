@@ -1,1 +1,1 @@
-<view><goods vue-id="1c48856f-1" goodsData="{{goodsData}}" bind:__l="__l"></goods></view>
+<view><goods vue-id="1c48856f-1" goodsData="{{goodsData}}" bind:__l="__l"></goods><view class="bottom" v-if="{{flag}}">-----我是有底线的-----</view></view>

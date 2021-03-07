@@ -1,1 +1,1 @@
-<view></view>
+<view class="image"><scroll-view class="left" scroll-y="{{true}}"><block wx:for="{{leftData}}" wx:for-item="item" wx:for-index="index" wx:key="id"><view data-event-opts="{{[['tap',[['changeIndex',[index]]]]]}}" class="{{[(index===currentIndex)?'active':'']}}" bindtap="__e">{{''+item.title+''}}</view></block></scroll-view></view>
